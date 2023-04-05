@@ -1,9 +1,11 @@
+import Nav from "../nav/Nav";
+
 export default function Layout(props) {
   return (
     <div className="Layout">
 
       <header>
-        <nav>NAV</nav>
+        <Nav />
       </header>
       <aside>
         <nav>NAV Categories</nav>
