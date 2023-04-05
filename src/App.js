@@ -1,7 +1,12 @@
+import { Link, Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+
 function App() {
   return (
     <div className="App">
-      <h2>Hello World</h2>
+
+      <Layout>Content</Layout>
+
     </div>
   );
 }
