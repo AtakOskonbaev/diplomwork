@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import Delivery from "./pages/Delivery";
 
 function App() {
   return (
@@ -9,9 +12,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<h2>about</h2>} />
-          <Route path="/contacts" element={<h2>contacts</h2>} />
-          <Route path="/delivery" element={<h2>delivery</h2>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/delivery" element={<Delivery/>} />
         </Routes>
       </Layout>
 
