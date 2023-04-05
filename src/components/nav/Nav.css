@@ -12,3 +12,6 @@
   color: white;
   text-decoration: none;
 }
+.Nav .logo {
+  max-width: 100px;
+}
