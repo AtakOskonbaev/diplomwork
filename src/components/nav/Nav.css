@@ -15,3 +15,7 @@
 .Nav .logo {
   max-width: 100px;
 }
+.Nav .NavItem a:hover {
+  background-color: #122752;
+  transition: all 500ms ease;
+}
