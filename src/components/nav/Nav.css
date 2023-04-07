@@ -1,21 +1,13 @@
 .Nav .NavItem {
   margin: 0;
-  position: sticky;
   display: flex;
-  background-color: #1e4083;
-  justify-content: right;
   list-style: none;
 }
 .Nav .NavItem a {
   display: inline-block;
   padding: 10px 20px;
-  color: white;
   text-decoration: none;
 }
 .Nav .logo {
   max-width: 100px;
-}
-.Nav .NavItem a:hover {
-  background-color: #122752;
-  transition: all 500ms ease;
 }
