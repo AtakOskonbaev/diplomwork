@@ -1,4 +1,5 @@
 import Nav from "../Nav/Nav";
+import Logo from "../Logo/Logo";
 import "./Layout.css";
 
 export default function Layout(props) {
@@ -6,6 +7,7 @@ export default function Layout(props) {
     <div className="Layout">
 
       <header>
+        <Logo/>
         <Nav />
       </header>
       <aside>
