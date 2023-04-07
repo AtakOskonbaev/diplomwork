@@ -1,5 +1,5 @@
 import "./Logo.css";
-import logo from "../../../assets/toystore-logo.png"
+import logo from "../../assets/toystore-logo.png";
 
 export default function Logo() {
   return (
