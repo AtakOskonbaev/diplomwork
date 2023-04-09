@@ -18,13 +18,9 @@ export default function CategoryList() {
     </li>
   ))
 
-  function showAndHide() {
-    document.querySelector("#dropdown").classList.toggle("show");
-  }
-
   return (
     <div className="CategoryList">
-      <button className="dropBtn" onClick={showAndHide}> Categories ˅</button>
+      <button className="dropBtn"> Categories ˅</button>
       <ul id="dropdown" className="dropdownContent">{output}</ul>
     </div>
   )
