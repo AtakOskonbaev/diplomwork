@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./CategoryList.css";
 
 export default function CategoryList() {
   const categories = [
