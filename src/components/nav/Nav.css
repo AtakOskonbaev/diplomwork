@@ -5,9 +5,10 @@
 }
 .Nav .NavItem a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 20px;
   text-decoration: none;
+  color: white;
 }
-.Nav .logo {
-  max-width: 100px;
+.Nav {
+  background-color: #2455b8;
 }
