@@ -11,4 +11,6 @@
 }
 .Nav {
   background-color: #2455b8;
+  position: sticky;
+  top: 0;
 }
