@@ -18,10 +18,12 @@ export default function CategoryList() {
     </li>
   ))
 
+  
+
   return (
     <div className="CategoryList">
       <button className="dropBtn"> Categories ˅</button>
-      <ul id="dropdown">{output}</ul>
+      <ul id="dropdown" className="dropdownContent">{output}</ul>
     </div>
   )
 }
