@@ -20,8 +20,8 @@ export default function CategoryList() {
 
   return (
     <div className="CategoryList">
-      <h3>Categories</h3>
-      <ul>{output}</ul>
+      <button className="dropBtn"> Categories ˅</button>
+      <ul id="dropdown">{output}</ul>
     </div>
   )
 }
