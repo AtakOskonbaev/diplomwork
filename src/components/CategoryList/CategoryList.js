@@ -15,10 +15,10 @@ export default function CategoryList() {
         snapshot.docs.forEach(doc => {
           const category = doc.data();
           category.id = doc.id;
-  
+
           newCategoryList.push(category);
         })
-  
+
         setCategoryList(newCategoryList);
       })
 
