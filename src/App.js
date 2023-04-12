@@ -7,7 +7,7 @@ import Delivery from "./pages/Delivery";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { categories, categoryCollection } from "./firebase";
+import { categoryCollection } from "./firebase";
 import { getDocs } from "firebase/firestore/lite";
 
 export const AppContext = createContext({
@@ -18,8 +18,8 @@ function App() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    return getDocs(categoryCollection)
-      .then((docs) => {
+    getDocs(categoryCollection)
+      .then(({ docs }) => {
         setCategories(
           docs.map(doc => ({
             ...doc.data(),
@@ -31,19 +31,19 @@ function App() {
 
   return (
     <div className="App">
+      <AppContext.Provider value={{ categories }} >
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/categories/:slug" element={<Category />} />
 
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/delivery" element={<Delivery />} />
-          <Route path="/categories/:slug" element={<Category />} />
-
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </AppContext.Provider>
     </div>
   );
 }
