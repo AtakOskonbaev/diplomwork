@@ -31,9 +31,16 @@
   text-decoration: none;
   display: block;
 }
+.dropdownContent li {
+  background-color: #f1f1f1;
+}
 .CategoryList:hover .dropdownContent {
   display: block;
 }
-.dropdownContent li a:hover {
+.dropdownContent li:hover {
   background-color: #c9c9c9;
+}
+.dropdownContent li a:hover {
+  transform: translateX(5px);
+  transition: 200ms ease all;
 }
