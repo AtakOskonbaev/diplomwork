@@ -2,16 +2,20 @@
   display: flex;
   flex-wrap: wrap;
 }
-.ProductList div{
+.Product hr {
+  border: 1px solid rgb(220, 220, 220);
+  width: 90%;
+}
+.ProductList .Product {
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(220, 220, 220);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
-  background-color: lightblue;
 }
 
-.ProductList img{
+.ProductList img {
   max-width: 250px;
   background-color: white;
 }
