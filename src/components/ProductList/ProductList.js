@@ -10,7 +10,7 @@ export default function ProductList() {
     <div key={product.id} className="Product">
       <img src={product.picture} alt={product.name} />
       <hr />
-      <NavLink to={"/product/" + product.slug}>
+      <NavLink to={"/products/" + product.slug}>
         {product.name}
       </NavLink>
 
