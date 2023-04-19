@@ -7,7 +7,7 @@ import Delivery from "./pages/Delivery";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { categoryCollection, productsCollection } from "./firebase";
+import { categoryCollection, onAuthChange, productsCollection } from "./firebase";
 import { getDocs } from "firebase/firestore/lite";
 import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
@@ -18,6 +18,7 @@ export const AppContext = createContext({
   products: [],
   cart: {},
   setCart: () => { },
+  user: null,
 });
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem("cart")) || {};
   });
+
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -53,11 +56,17 @@ function App() {
           }))
         )
       })
+
+    onAuthChange(user => {
+      setUser(user);
+    })
   }, []);
+
+
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart }} >
+      <AppContext.Provider value={{ categories, products, cart, setCart, user }} >
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
