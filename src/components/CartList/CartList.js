@@ -14,7 +14,7 @@ export default function CartList() {
   }
 
   function onItemRemove(product) {
-    const newCart = {...cart};
+    const newCart = { ...cart };
     delete newCart[product.id];
     setCart(newCart);
   }
@@ -32,10 +32,10 @@ export default function CartList() {
           value={cart[product.name]}
           min={1}
           onChange={(event) => onQuantityChange(product, +event.target.value)} />
-        <span>{cart[product.id] * product.price} $</span>
+        <span>{(cart[product.id] * product.price).toFixed(2)} $</span>
         <button
-          onClick={() => onItemRemove(product)
-          }>Remove</button>
+          onClick={() => onItemRemove(product)}
+        >Remove</button>
       </div>
     ));
 
