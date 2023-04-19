@@ -1,4 +1,4 @@
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,6 +11,7 @@ import { categoryCollection, productsCollection } from "./firebase";
 import { getDocs } from "firebase/firestore/lite";
 import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
+import ThankYou from "./pages/ThankYou";
 
 export const AppContext = createContext({
   categories: [],
@@ -66,6 +67,7 @@ function App() {
             <Route path="/delivery" element={<Delivery />} />
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
