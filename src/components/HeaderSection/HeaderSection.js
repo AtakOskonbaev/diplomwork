@@ -7,7 +7,10 @@ export default function HeaderSection() {
     <div className="HeaderSection">
       <Logo />
       <input type="text" placeholder="Catalog search" />
-      <p>Daily from <span>10am</span> to <span>10pm</span></p>
+      <div>
+        <p>Daily from 10am to 10pm</p>
+        <p>+996 <span>123 345 567</span></p>
+      </div>
       <CartLink />
     </div>
   )
