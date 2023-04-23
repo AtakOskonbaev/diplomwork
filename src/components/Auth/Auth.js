@@ -1,3 +1,4 @@
+import "./Auth.css";
 import { useContext } from "react";
 import { signIn, signOff } from "../../firebase";
 import { AppContext } from "../../App";
