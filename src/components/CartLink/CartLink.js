@@ -10,9 +10,12 @@ export default function CartLink() {
 
   return (
     <div className="CartLink" >
-      <NavLink to="/cart">
-        Cart: ({total});
-      </NavLink>
+      <button>
+        <NavLink to="/cart">
+          Cart: ({total});
+        </NavLink>
+      </button>
+
     </div>
   )
 }
