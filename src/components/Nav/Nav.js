@@ -18,7 +18,7 @@ export default function Nav() {
         <li>
           <NavLink to="/delivery">Delivery</NavLink>
         </li>
-        <li>
+        <li className="rightSide">
           <Auth />
         </li>
       </ul>
