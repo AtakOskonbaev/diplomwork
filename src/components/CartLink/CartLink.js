@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./CartLink.css";
 import { AppContext } from "../../App";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function CartLink() {
   const { cart } = useContext(AppContext);
@@ -10,13 +10,14 @@ export default function CartLink() {
 
   return (
     <div className="CartLink" >
-      <button className="cartlink-button">
-        <img alt="cart" src="https://magic-toys.kg/image/cache/catalog/revolution/demo_tovars/market/soc/shopping-cart-21x21.svg" className="cart"/>
-        <NavLink to="/cart">
-          Cart: ({total});
-        </NavLink>
-      </button>
-
+      <Link to="/cart" className="link">
+        <button className="cartlink-button">
+          <img alt="cart" src="https://magic-toys.kg/image/cache/catalog/revolution/demo_tovars/market/soc/shopping-cart-21x21.svg" className="cart" />
+          <div>
+            Cart: {total}
+          </div>
+        </button>
+      </Link>
     </div>
   )
 }
