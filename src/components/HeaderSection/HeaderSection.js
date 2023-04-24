@@ -7,7 +7,7 @@ export default function HeaderSection() {
     <div className="HeaderSection">
       <Logo />
       <div className="search">
-        <input type="text" placeholder="Catalog search" />
+        <input type="text" placeholder="Catalog search" className="searcher"/>
         <i className="fa-solid fa-magnifying-glass"></i>
         </div>
       <div>

@@ -13,12 +13,12 @@
   padding: 10px;
   cursor: pointer;
 }
-input {
+.searcher {
   width: 200px;
   border: 0; 
   background-color: transparent;
 }
-input:focus {
+.searcher:focus {
   outline: none;
 }
 .pink-text {
