@@ -1,0 +1,15 @@
+.cartlink-button {
+  width: 150px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.cart {
+  width: 50px;
+  transform: translateY(-7px);
+}
