@@ -2,7 +2,7 @@
   background-color: #f7f7f7;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px 0;
   margin-bottom: 10px;
 }
@@ -13,12 +13,6 @@
   padding: 10px;
   cursor: pointer;
 }
-i {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  order: -1;
-}
 input {
   width: 200px;
   border: 0; 
@@ -26,4 +20,8 @@ input {
 }
 input:focus {
   outline: none;
+}
+.pink-text {
+  color: palevioletred;
+  font-size: 23px;
 }

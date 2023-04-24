@@ -12,7 +12,7 @@ export default function HeaderSection() {
         </div>
       <div>
         <p>Daily from 10am to 10pm</p>
-        <p>+996 <span>123 345 567</span></p>
+        <p>+996 <span className="pink-text">123 345 567</span></p>
       </div>
       <CartLink />
     </div>
