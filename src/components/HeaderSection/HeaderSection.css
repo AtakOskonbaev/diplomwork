@@ -6,3 +6,24 @@
   padding: 10px 0;
   margin-bottom: 10px;
 }
+.search {
+  display: inline-flex;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+i {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  order: -1;
+}
+input {
+  width: 200px;
+  border: 0; 
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
