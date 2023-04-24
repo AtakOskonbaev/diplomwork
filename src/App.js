@@ -7,15 +7,17 @@ import Delivery from "./pages/Delivery";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { categoryCollection, onAuthChange, productsCollection } from "./firebase";
+import { categoryCollection, onAuthChange, ordersCollection, productsCollection } from "./firebase";
 import { getDocs } from "firebase/firestore/lite";
 import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
+import Orders from "./pages/Orders";
 
 export const AppContext = createContext({
   categories: [],
   products: [],
+  orders: [],
   cart: {},
   setCart: () => { },
   user: null,
@@ -24,6 +26,7 @@ export const AppContext = createContext({
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem("cart")) || {};
   });
@@ -44,12 +47,20 @@ function App() {
           }))
         )
       })
-  }, []);
 
-  useEffect(() => {
     getDocs(productsCollection)
       .then(({ docs }) => {
         setProducts(
+          docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+          }))
+        )
+      })
+
+      getDocs(ordersCollection)
+      .then(({ docs }) => {
+        setOrders(
           docs.map(doc => ({
             ...doc.data(),
             id: doc.id
@@ -66,7 +77,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart, user }} >
+      <AppContext.Provider value={{ categories, products, cart, setCart, user, orders }} >
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -77,6 +88,7 @@ function App() {
             <Route path="/categories/:slug" element={<Category />} />
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/orders" element={<Orders />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
