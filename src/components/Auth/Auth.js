@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { signIn, signOff } from "../../firebase";
 import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
-import Orders from "../../pages/Orders";
 
 export default function Auth() {
   const { user } = useContext(AppContext);
