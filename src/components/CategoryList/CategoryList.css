@@ -6,6 +6,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-family: inherit;
 }
 .dropBtn:hover {
   background-color: #c6e900;
