@@ -1,4 +1,4 @@
-.dropBtn {
+.dropdownBtn {
   background-color: #b1cc19;
   color: white;
   padding: 10px;
@@ -8,7 +8,7 @@
   border-radius: 5px;
   font-family: inherit;
 }
-.dropBtn:hover {
+.dropdownBtn:hover {
   background-color: #c6e900;
 }
 .CategoryList {
