@@ -14,22 +14,26 @@ export default function OrderList() {
       const product = products.find(product => product.id === productId);
 
       return (
-        <div>
-          {product.name}: {order.cart[productId]} * {product.price} som = {order.cart[productId] * product.price} som
+        <div className="product">
+          <div className="product-name">{product.name}</div>
+          <div>Amount: <span>{order.cart[productId]}</span></div>
+          <div>Price: <span>{product.price}$</span></div>
+          <div>Total price: <span>{order.cart[productId] * product.price}$</span></div>
         </div>
       );
     })
 
     return (
       <ul className="Order">
-        <li>Name: {order.name}</li>
-        <li>Phone: {order.phone}</li>
-        <li>Address: {order.address}</li>
-        <li>Cart:
-          <ul>
+        <li>Name: <span>{order.name}</span></li>
+        <li>Phone: <span>{order.phone}</span></li>
+        <li>Address: <span>{order.address}</span></li>
+        <li>Orders:
+          <ol>
             <li>{cartOutput}</li>
-          </ul>
+          </ol>
         </li>
+        <hr />
       </ul>
     );
   })
