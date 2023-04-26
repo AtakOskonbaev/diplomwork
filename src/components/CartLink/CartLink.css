@@ -17,6 +17,7 @@
 }
 .cartlink-button:hover {
   background-color: palevioletred;
+  border: 1px solid palevioletred;
 }
 .cartlink-button div {
   text-decoration: none;

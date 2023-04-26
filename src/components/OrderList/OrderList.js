@@ -21,12 +21,16 @@ export default function OrderList() {
     })
 
     return (
-      <div className="Order">
-        <div>Name: {order.name}</div>
-        <div>Phone: {order.phone}</div>
-        <div>Address: {order.address}</div>
-        <div>Cart: {cartOutput}</div>
-      </div>
+      <ul className="Order">
+        <li>Name: {order.name}</li>
+        <li>Phone: {order.phone}</li>
+        <li>Address: {order.address}</li>
+        <li>Cart:
+          <ul>
+            <li>{cartOutput}</li>
+          </ul>
+        </li>
+      </ul>
     );
   })
 
