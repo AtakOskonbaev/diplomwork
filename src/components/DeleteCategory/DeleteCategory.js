@@ -20,6 +20,10 @@ export default function DeleteCategory({category}) {
       return;
     }
 
+    if(!window.confirm("Are you sure that you really want to delete this category?")){
+      return;
+    }
+
     deleteDoc(doc(db, "categories", category.id));
   }
 
