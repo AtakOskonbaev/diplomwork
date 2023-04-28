@@ -18,8 +18,9 @@ export default function CategoryList() {
   return (
     <div className="CategoryList">
       <button className="dropdownBtn"> Categories <i className="fa-solid fa-chevron-down fa-xs"></i></button>
-      <ul className="dropdownContent">{output}</ul>
+      <ul className="dropdownContent">{output}
       <AddCategory />
+      </ul>
     </div>
   )
 }
