@@ -7,8 +7,8 @@ import Delivery from "./pages/Delivery";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { categoryCollection, onAuthChange, ordersCollection, productsCollection } from "./firebase";
-import { getDocs } from "firebase/firestore/lite";
+import { onAuthChange, onCategoriesLoad, ordersCollection, productsCollection } from "./firebase";
+import { getDocs } from "firebase/firestore";
 import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
@@ -38,15 +38,7 @@ function App() {
   }, [cart]);
 
   useEffect(() => {
-    getDocs(categoryCollection)
-      .then(({ docs }) => {
-        setCategories(
-          docs.map(doc => ({
-            ...doc.data(),
-            id: doc.id
-          }))
-        )
-      })
+    onCategoriesLoad(setCategories);
 
     getDocs(productsCollection)
       .then(({ docs }) => {
