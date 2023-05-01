@@ -7,8 +7,7 @@ import Delivery from "./pages/Delivery";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { onAuthChange, onCategoriesLoad, ordersCollection, productsCollection } from "./firebase";
-import { getDocs } from "firebase/firestore";
+import { onAuthChange, onCategoriesLoad, onOrdersLoad, onProductsLoad } from "./firebase";
 import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
@@ -39,26 +38,8 @@ function App() {
 
   useEffect(() => {
     onCategoriesLoad(setCategories);
-
-    getDocs(productsCollection)
-      .then(({ docs }) => {
-        setProducts(
-          docs.map(doc => ({
-            ...doc.data(),
-            id: doc.id
-          }))
-        )
-      })
-
-      getDocs(ordersCollection)
-      .then(({ docs }) => {
-        setOrders(
-          docs.map(doc => ({
-            ...doc.data(),
-            id: doc.id
-          }))
-        )
-      })
+    onProductsLoad(setProducts);
+    onOrdersLoad(setOrders);
 
     onAuthChange(user => {
       if(user) {
