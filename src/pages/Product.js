@@ -15,9 +15,12 @@ export default function Product() {
 
   return (
     <div className="Product">
-      <h1>{product.name}</h1>
       <img src={product.picture} alt={product.name} />
-      <span>{product.span}</span>
+      <div>
+        <h1>{product.name}</h1>
+        <p><strong>Price:</strong> {product.price}$</p>
+        <p><strong>Description: </strong>{product.description}</p>
+      </div>
     </div>
   )
 }
