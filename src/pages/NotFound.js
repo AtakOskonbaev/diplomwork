@@ -1,8 +1,9 @@
+import rickroll from "../assets/rickroll-qr-code.png"
 export default function NotFound() {
   return (
     <div className="NotFound">
-      <h2>404</h2>
-      <h4>Неправильный адрес, мудила</h4>
+      <h1>404</h1>
+      <img src={rickroll} alt="rickroll-qr-code"/>
     </div>
   );
 }
