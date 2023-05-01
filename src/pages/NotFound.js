@@ -1,4 +1,5 @@
-import rickroll from "../assets/rickroll-qr-code.png"
+import rickroll from "../assets/rickroll-qr-code.png";
+
 export default function NotFound() {
   return (
     <div className="NotFound">
