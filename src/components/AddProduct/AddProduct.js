@@ -24,7 +24,7 @@ export default function AddProduct() {
           Name: <input type="text" name="name" required />
         </label>
         <label>
-          Price: <input type="number" name="price" min={0} required /> 
+          Price: <input type="number" name="price" min={0} step="any" required /> 
         </label>
         <label>
           Picture: <input type="file" name="picture" required />
