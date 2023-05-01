@@ -14,3 +14,7 @@ code {
 .Product {
   display: flex;
 }
+.Contacts i {
+  color: #555555;
+  margin-right: 8px;
+}
