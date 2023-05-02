@@ -1,8 +1,9 @@
 .ProductList {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
-.Product hr {
+.ProductList .Product hr {
   border: 1px solid rgb(220, 220, 220);
   width: 90%;
 }
@@ -14,8 +15,17 @@
   margin: 5px;
   padding: 5px;
 }
-
-.ProductList img {
+.ProductList .Product img {
   max-width: 250px;
   background-color: white;
 }
+.Product a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 100ms linear;
+}
+.Product a:hover {
+  color: rgb(255, 130, 151);
+}
+
