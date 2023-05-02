@@ -1,0 +1,9 @@
+.AddToCart button {
+  padding: 2px 10px;
+  margin-right: 5px;
+  background-color: #e85a71;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: inherit;
+}
