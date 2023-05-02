@@ -6,4 +6,8 @@
   color: white;
   border-radius: 5px;
   font-family: inherit;
+  transition: all 100ms linear;
+}
+.AddToCart button:hover {
+  background-color: rgb(255, 130, 151);
 }
