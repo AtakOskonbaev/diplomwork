@@ -1,6 +1,7 @@
 .ProductList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .ProductList .product hr {
   border: 1px solid rgb(220, 220, 220);
