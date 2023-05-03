@@ -1,5 +1,25 @@
-.CartList .CartItem {
+.CartList .cartItem {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  width: 80%;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.cartItem img {
+  max-width: 150px;
+  padding-right: 30px;
+}
+.cartItem a {
+  color: black;
+  text-decoration: none;
+  margin-right: auto;
+}
+.cartItem input {
+  width: 30px;
+  margin-right: auto;
+}
+.cartItem i {
+  cursor: pointer;
+  margin-left: auto;
 }
