@@ -37,19 +37,23 @@ export default function OrderForm() {
 
   return (
     <div className="OrderForm" >
-      <form onSubmit={onFormSubmit}>
-        <span>Order your toys: </span>
-        <label>
-          Name: <input type="text" name="name" placeholder="John" required />
-        </label>
-        <label>
-          Phone: <input type="tel" name="phone" placeholder="+123 (123) 234 345" required />
-        </label>
-        <label>
-          Address: <input type="text" name="address" placeholder="Country, city, street" required />
-        </label>
-        <button>Submit</button>
-      </form>
+      <a to="#darkness">Order</a>
+
+      <div id="darkness">
+        <form onSubmit={onFormSubmit} id="window">
+          <a to="#" class="close">Закрыть окно</a>
+          <label>
+            Name: <input type="text" name="name" placeholder="John" required />
+          </label>
+          <label>
+            Phone: <input type="tel" name="phone" placeholder="+123 (123) 234 345" required />
+          </label>
+          <label>
+            Address: <input type="text" name="address" placeholder="Country, city, street" required />
+          </label>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }
