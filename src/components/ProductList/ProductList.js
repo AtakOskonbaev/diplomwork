@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./ProductList.css";
 import { AppContext } from "../../App";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AddToCart } from "../AddToCart/AddToCart";
 import AddProduct from "../AddProduct/AddProduct";
 
@@ -10,12 +10,14 @@ export default function ProductList({ category }) {
 
   const output = products.filter(product => product.category === category.id)
     .map(product => (
-      <div key={product.id} className="Product">
-        <img src={product.picture} alt={product.name} />
+      <div key={product.id} className="product">
+        <Link to={"/products/" + product.slug}>
+          <img src={product.picture} alt={product.name} />
+        </Link>
         <hr />
-        <NavLink to={"/products/" + product.slug}>
+        <Link to={"/products/" + product.slug}>
           {product.name}
-        </NavLink>
+        </Link>
 
         <br />
 
@@ -27,7 +29,7 @@ export default function ProductList({ category }) {
   return (
     <div className="ProductList">
       {output}
-      
+
       <AddProduct />
     </div>
   )
