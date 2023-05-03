@@ -31,4 +31,6 @@
 .product a:hover {
   color: rgb(255, 130, 151);
 }
-
+.ProductList span {
+  font-size: 20px;
+}
