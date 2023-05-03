@@ -1,25 +1,28 @@
 .CartList .cartItem {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.1fr;
   align-items: center;
-  width: 80%;
+  
+  width: 90%;
+  padding: 10px 0 ;
   border-bottom: 1px solid gray;
-  margin-bottom: 20px;
   font-size: 28px;
 }
 .cartItem img {
   max-width: 150px;
-  padding-right: 30px;
+
+  transition: all 100ms linear;
+}
+.cartItem input {
+  width: 30px;
 }
 .cartItem a {
   color: black;
   text-decoration: none;
-  margin-right: auto;
 }
-.cartItem input {
-  width: 30px;
-  margin-right: auto;
+.cartItem:hover img {
+  filter: opacity(80%);
 }
 .cartItem i {
   cursor: pointer;
-  margin-left: auto;
 }
