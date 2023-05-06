@@ -25,7 +25,9 @@ export default function CartList() {
     .filter((product) => productIds.includes(product.id))
     .map((product) => (
       <div className="cartItem" key={product.id}>
-        <img src={product.picture} alt={product.name} />
+        <Link to={"/products/" + product.slug}>
+          <img src={product.picture} alt={product.name} />
+        </Link>
         <Link to={"/products/" + product.slug}>{product.name}</Link>
         <input
           type="number"
@@ -33,7 +35,7 @@ export default function CartList() {
           min={1}
           onChange={(event) => onQuantityChange(product, +event.target.value)} />
         <span>{(cart[product.id] * product.price).toFixed(2)} $</span>
-        <i class="fa-solid fa-xmark" onClick={() => onItemRemove(product)}/>
+        <i class="fa-solid fa-xmark" onClick={() => onItemRemove(product)} />
       </div>
     ));
 
