@@ -3,7 +3,7 @@ import "./OrderForm.css";
 import { ordersCollection } from "../../firebase";
 import { AppContext } from "../../App";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function OrderForm() {
   const { cart, setCart, user } = useContext(AppContext);
@@ -37,11 +37,11 @@ export default function OrderForm() {
 
   return (
     <div className="OrderForm" >
-      <a to="#darkness">Order</a>
+      <Link to="#darkness">Order</Link>
 
       <div id="darkness">
         <form onSubmit={onFormSubmit} id="window">
-          <a to="#" class="close">Закрыть окно</a>
+          <Link to="#" class="close">Закрыть окно</Link>
           <label>
             Name: <input type="text" name="name" placeholder="John" required />
           </label>
