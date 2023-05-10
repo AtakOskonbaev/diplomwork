@@ -16,7 +16,7 @@ export default function ProductList({ category }) {
           <img src={product.picture} alt={product.name} />
         </Link>
         <hr />
-        <Link to={"/products/" + product.slug}>
+        <Link to={"/products/" + product.slug} className="text">
           {product.name}
         </Link>
 

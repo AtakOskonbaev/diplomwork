@@ -12,7 +12,7 @@
   flex-direction: column;
   border: 1px solid rgb(220, 220, 220);
   border-radius: 5px;
-  margin: 5px;
+  margin: 15px 0px;
   padding: 5px;
 }
 .ProductList .product img {
@@ -34,4 +34,8 @@
 }
 .ProductList span {
   font-size: 20px;
+}
+.ProductList .text {
+  max-width: 200px;
+  height: 90px;
 }
