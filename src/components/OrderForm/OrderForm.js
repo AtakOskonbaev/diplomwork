@@ -37,11 +37,11 @@ export default function OrderForm() {
 
   return (
     <div className="OrderForm" >
-      <Link to="#darkness">Order</Link>
+      <Link href="#darkness">Order</Link>
 
       <div id="darkness">
         <form onSubmit={onFormSubmit} id="window">
-          <Link to="#" class="close">Закрыть окно</Link>
+          <Link href="#" className="close">Закрыть окно</Link>
           <label>
             Name: <input type="text" name="name" placeholder="John" required />
           </label>
