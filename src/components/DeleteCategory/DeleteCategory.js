@@ -28,6 +28,6 @@ export default function DeleteCategory({category}) {
   }
 
   return (
-      <button className="DeleteCatrgory" onClick={onDeleteClick}>-</button>
+      <button className="deleteCategory" onClick={onDeleteClick}>-</button>
   )
 }
