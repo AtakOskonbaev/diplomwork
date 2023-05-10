@@ -96,8 +96,8 @@ export default function AddProduct({ category }) {
         </label>
         <label>
           Description:
-          <input
-            type="text"
+          <textarea
+            type=""
             name="description"
             value={description}
             onChange={onChangeDescription}
