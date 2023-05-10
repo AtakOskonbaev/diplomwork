@@ -30,7 +30,7 @@ export default function ProductList({ category }) {
     <div className="ProductList">
       {output}
 
-      <AddProduct />
+      <AddProduct category={category} />
     </div>
   )
 }
