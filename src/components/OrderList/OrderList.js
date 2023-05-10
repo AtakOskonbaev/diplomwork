@@ -14,7 +14,7 @@ export default function OrderList() {
       const product = products.find(product => product.id === productId);
 
       return (
-        <div className="product">
+        <div className="product" key={product.id}>
           <div className="product-name">{product.name}</div>
           <div>Amount: <span>{order.cart[productId]}</span></div>
           <div>Price: <span>{product.price}$</span></div>
@@ -24,7 +24,7 @@ export default function OrderList() {
     })
 
     return (
-      <ul className="Order">
+      <ul className="Order" key={order.id}>
         <li>Name: <span>{order.name}</span></li>
         <li>Phone: <span>{order.phone}</span></li>
         <li>Address: <span>{order.address}</span></li>
