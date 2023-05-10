@@ -36,13 +36,13 @@ export default function AddProduct() {
       <form onSubmit={onFormSubmit}>
         <h3>Create a new product</h3>
         <label>
-          Name: <input type="text" name="name" required />
+          Name: <input type="text" name="name" value={name} onChange={onChangeName} required />
         </label>
         <label>
-          Price: <input type="number" name="price" min={0} step="any" required />
+          Price: <input type="number" name="price" min={0} step="any" value={price} onChange={onChangePrice} required />
         </label>
         <label>
-          Picture: <input type="file" name="picture" required />
+          Picture: <input type="file" name="picture" onChange={onChangePicture} required />
         </label>
         <button>Submit</button>
       </form>
