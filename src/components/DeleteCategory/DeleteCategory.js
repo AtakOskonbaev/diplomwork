@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import "./DeleteCategory.css";
 import { AppContext } from "../../App";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
