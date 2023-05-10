@@ -9,6 +9,7 @@ export default function AddProduct({ category }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [picture, setPicture] = useState(null);
+  const [description, setDescription] = useState("");
 
   if (!user || !user.isAdmin) {
     return null;
@@ -23,6 +24,9 @@ export default function AddProduct({ category }) {
   function onChangePicture(event) {
     const file = event.target.files[0];
     setPicture(file);
+  }
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
   }
 
   function onFormSubmit(event) {
@@ -40,6 +44,7 @@ export default function AddProduct({ category }) {
           name: name,
           price: price,
           picture: pictureUrl,
+          description: description,
           slug: name.replaceAll(" ", "-").toLowerCase(),
         })
       )
@@ -47,6 +52,7 @@ export default function AddProduct({ category }) {
         setName("");
         setPrice("");
         setPicture(null);
+        setDescription("");
       })
       .catch((error) => {
         console.log("Failed to add product:", error);
@@ -73,6 +79,7 @@ export default function AddProduct({ category }) {
             type="number"
             value={price}
             name="price"
+            step="any"
             onChange={onChangePrice}
             min={0}
             required
@@ -84,6 +91,16 @@ export default function AddProduct({ category }) {
             type="file"
             name="picture"
             onChange={onChangePicture}
+            required
+          />
+        </label>
+        <label>
+          Description:
+          <input
+            type="text"
+            name="description"
+            value={description}
+            onChange={onChangeDescription}
             required
           />
         </label>
