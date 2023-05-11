@@ -11,28 +11,18 @@
   align-items: center;
   justify-content: center;
   transform: scale(0);
+
+  transition: all 150ms linear;
 }
 .OrderForm.active {
   transform: scale(1);
 }
 .popup {
-  padding: 20px;
+  padding: 20px 50px;
   border-radius: 10px;
   background-color: white;
 }
 
-.OrderForm .button {
-  margin-top: 40px;
-  text-align: center;
-}
-.OrderForm .button a {
-  font-family: inherit;
-  background-color: orange;
-  padding: 20px 50px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-}
 .popup form {
   display: flex;
   flex-direction: column;
