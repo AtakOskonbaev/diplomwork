@@ -3,9 +3,9 @@ import "./OrderForm.css";
 import { ordersCollection } from "../../firebase";
 import { AppContext } from "../../App";
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function OrderForm({active, setActive}) {
+export default function OrderForm({ active, setActive }) {
   const { cart, setCart, user } = useContext(AppContext);
   const navigate = useNavigate();
 
@@ -37,34 +37,26 @@ export default function OrderForm({active, setActive}) {
 
 
   return (
-    <div className="OrderForm" >
-
-      <div className="button">
-        <Link hrefLang="#" id="open-popup">Order</Link>
-      </div>
-
-      <div className="popup">
-        <div className="popup-container">
-          <div className="popup-body">
-            <form onSubmit={onFormSubmit} id="window">
-              <label>
-                <input type="text" name="name" placeholder="Name" required />
-              </label>
-              <label>
-                <input type="tel" name="phone" placeholder="Phone" required />
-              </label>
-              <label>
-                <input type="text" name="address" placeholder="Country, city, street" required />
-              </label>
-              <div>
-                <button>Submit</button>
-              </div>
-            </form>
-            <div id="close"><i class="fa-solid fa-xmark fa-2xl" /></div>
-          </div>
+    <div className={active ? "OrderForm active" : "OrderForm"} onClick={() => setActive(false)}>
+      <div className="popup" onClick={e => e.stopPropagation()}>
+        <div className="popup-body">
+          <form onSubmit={onFormSubmit} id="window">
+            <label>
+              <input type="text" name="name" placeholder="Name" required />
+            </label>
+            <label>
+              <input type="tel" name="phone" placeholder="Phone" required />
+            </label>
+            <label>
+              <input type="text" name="address" placeholder="Country, city, street" required />
+            </label>
+            <div>
+              <button>Submit</button>
+            </div>
+          </form>
+          <div id="close"><i class="fa-solid fa-xmark fa-2xl" /></div>
         </div>
       </div>
-
     </div>
   )
 }
