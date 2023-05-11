@@ -5,7 +5,7 @@ import { AppContext } from "../../App";
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function OrderForm() {
+export default function OrderForm({active, setActive}) {
   const { cart, setCart, user } = useContext(AppContext);
   const navigate = useNavigate();
 
