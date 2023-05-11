@@ -59,7 +59,9 @@ export default function OrderForm() {
               <label>
                 <input type="text" name="address" placeholder="Country, city, street" required />
               </label>
-              <button>Submit</button>
+              <div>
+                <button>Submit</button>
+              </div>
             </form>
             <div id="close"><i class="fa-solid fa-xmark fa-2xl" /></div>
           </div>
