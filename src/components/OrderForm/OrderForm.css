@@ -55,6 +55,9 @@
   padding: 10px 0;
   font-size: 20px;
 }
+.popup form button:hover {
+  background-color: rgb(255, 130, 151);
+}
 .popup form input {
   width: 80%;
   height: 40px;
