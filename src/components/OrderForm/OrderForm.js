@@ -35,25 +35,37 @@ export default function OrderForm() {
       })
   }
 
+  const openPopup = document.querySelector("#open-popup");
+  const closePopup = document.querySelector("#close");
+  const popup = document.querySelector(".popup");
+
   return (
     <div className="OrderForm" >
-      <Link href="#darkness">Order</Link>
 
-      <div id="darkness">
-        <form onSubmit={onFormSubmit} id="window">
-          <Link href="#" className="close">Закрыть окно</Link>
-          <label>
-            Name: <input type="text" name="name" placeholder="John" required />
-          </label>
-          <label>
-            Phone: <input type="tel" name="phone" placeholder="+123 (123) 234 345" required />
-          </label>
-          <label>
-            Address: <input type="text" name="address" placeholder="Country, city, street" required />
-          </label>
-          <button>Submit</button>
-        </form>
+      <div className="button">
+        <Link hrefLang="#" id="open-popup">Order</Link>
       </div>
+
+      <div className="popup">
+        <div className="popup-container">
+          <div className="popup-body">
+            <form onSubmit={onFormSubmit} id="window">
+              <label>
+                <input type="text" name="name" placeholder="Name" required />
+              </label>
+              <label>
+                <input type="tel" name="phone" placeholder="Phone" required />
+              </label>
+              <label>
+                <input type="text" name="address" placeholder="Country, city, street" required />
+              </label>
+              <button>Submit</button>
+            </form>
+            <div id="close"><i class="fa-solid fa-xmark fa-2xl" /></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
