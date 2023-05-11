@@ -54,7 +54,6 @@ export default function OrderForm({ active, setActive }) {
               <button>Submit</button>
             </div>
           </form>
-          <div id="close"><i class="fa-solid fa-xmark fa-2xl" /></div>
         </div>
       </div>
     </div>
