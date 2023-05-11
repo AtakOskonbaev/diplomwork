@@ -2,7 +2,7 @@ import { addDoc } from "firebase/firestore";
 import "./OrderForm.css";
 import { ordersCollection } from "../../firebase";
 import { AppContext } from "../../App";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function OrderForm() {
@@ -35,9 +35,6 @@ export default function OrderForm() {
       })
   }
 
-  const openPopup = document.querySelector("#open-popup");
-  const closePopup = document.querySelector("#close");
-  const popup = document.querySelector(".popup");
 
   return (
     <div className="OrderForm" >
