@@ -9,7 +9,7 @@ export function Cart() {
     <div className="Cart" >
       <h1>Cart</h1>
       <CartList />
-      <button className="order" onClick={() => setModalActive(true)}>order</button>
+      <button className="order" onClick={() => setModalActive(true)}>Order</button>
       <OrderForm active={modalActive} setActive={setModalActive} />
     </div>
   )
