@@ -1,5 +1,24 @@
 .OrderForm {
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.521);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+.OrderForm.active {
+  transform: scale(1);
+}
+.popup {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .OrderForm .button {
@@ -13,33 +32,6 @@
   border-radius: 10px;
   text-decoration: none;
   color: white;
-}
-.popup {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.521);
-  z-index: 10;
-  display: none;
-}
-.popup.active {
-  display: block;
-}
-.popup .popup-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-.popup .popup-body {
-  margin: auto;
-  width: 500px;
-  background-color: white;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  padding: 80px 15px 50px 15px;
 }
 .popup #close {
   position: absolute;
