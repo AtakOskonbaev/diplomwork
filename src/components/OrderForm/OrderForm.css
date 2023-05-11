@@ -6,3 +6,20 @@
   margin-top: 40px;
   text-align: center;
 }
+.OrderForm .button a {
+  font-family: inherit;
+  background-color: orange;
+  padding: 20px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.521);
+  z-index: 10;
+}
