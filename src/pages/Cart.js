@@ -3,7 +3,7 @@ import CartList from "../components/CartList/CartList";
 import OrderForm from "../components/OrderForm/OrderForm";
 
 export function Cart() {
-  const [modalActive, setModalActive] = useState(true);
+  const [modalActive, setModalActive] = useState(false);
 
   return (
     <div className="Cart" >
