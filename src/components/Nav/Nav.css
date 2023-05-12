@@ -12,8 +12,6 @@
   transition: all 100ms linear;
 }
 .Nav {
-  position: sticky;
-  top: 0;
   border-bottom: 1px solid rgb(238, 238, 238);
 }
 .Nav .NavItem .rightSide {
