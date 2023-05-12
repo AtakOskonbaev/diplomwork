@@ -16,10 +16,10 @@
 .searcher {
   width: 200px;
   padding: 10px;
-  border: 0; 
+  border: 0;
   background-color: transparent;
 }
-.search i { 
+.search i {
   margin: 3px;
 }
 .searcher:focus {
@@ -28,4 +28,10 @@
 .pink-text {
   color: palevioletred;
   font-size: 23px;
+}
+
+@media screen and (max-width: 750px) {
+  .HeaderSection .info {
+    display: none;
+  }
 }
