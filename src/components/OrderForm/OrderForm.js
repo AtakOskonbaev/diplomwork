@@ -13,7 +13,7 @@ export default function OrderForm({ active, setActive }) {
     return "Your cart is empty";
   }
   if (!user) {
-    return "You are not logged in, please log in";
+    return "(You are not logged in, please log in)";
   }
 
 

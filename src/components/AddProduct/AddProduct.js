@@ -42,7 +42,7 @@ export default function AddProduct({ category }) {
         addDoc(productsCollection, {
           category: category.id,
           name: name,
-          price: price,
+          price: Number(price),
           picture: pictureUrl,
           description: description,
           slug: name.replaceAll(" ", "-").toLowerCase(),
@@ -50,7 +50,7 @@ export default function AddProduct({ category }) {
       )
       .then(() => {
         setName("");
-        setPrice("");
+        setPrice(0);
         setPicture(null);
         setDescription("");
       })
