@@ -13,16 +13,18 @@ export default function OrderList() {
     const cartOutput = Object.keys(order.cart).map(productId => {
       const product = products.find(product => product.id === productId);
 
-  if (!product) {
-    return "Product not found";
-  }
+      if (!product) {
+        return "Product not found";
+      }
 
       return (
         <div className="product" key={product.id}>
-          <div className="product-name">{product.name}</div>
-          <div>Amount: <span>{order.cart[productId]}</span></div>
-          <div>Price: <span>{product.price}$</span></div>
-          <div>Total price: <span>{order.cart[productId] * product.price}$</span></div>
+          <li>
+            <div className="product-name">{product.name}</div>
+            <div>Amount: <span>{order.cart[productId]}</span></div>
+            <div>Price: <span>{product.price}$</span></div>
+            <div>Total price: <span>{order.cart[productId] * product.price}$</span></div>
+          </li>
         </div>
       );
     })
@@ -33,9 +35,9 @@ export default function OrderList() {
         <li>Phone: <span>{order.phone}</span></li>
         <li>Address: <span>{order.address}</span></li>
         <li>Orders:
-          <ol>
-            <li>{cartOutput}</li>
-          </ol>
+          <ul>
+            {cartOutput}
+          </ul>
         </li>
         <hr />
       </ul>
