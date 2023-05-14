@@ -50,7 +50,7 @@ export default function AddProduct({ category }) {
       )
       .then(() => {
         setName("");
-        setPrice(0);
+        setPrice(0.0);
         setPicture(null);
         setDescription("");
       })
