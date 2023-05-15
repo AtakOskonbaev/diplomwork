@@ -7,8 +7,9 @@ import { AppContext } from "../../App";
 export default function AddCategory() {
   const [category, setCategory] = useState("")
   const { user } = useContext(AppContext);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  if(!user || !user.isAdmin ) {
+  if (!user || !user.isAdmin) {
     return null;
   }
 
@@ -24,6 +25,8 @@ export default function AddCategory() {
 
       return;
     }
+
+    setIsSubmitting(true);
 
     addDoc(categoryCollection, {
       name: category.trim(),
@@ -44,6 +47,8 @@ export default function AddCategory() {
         value={category}
         onChange={onChangeCategory}
       />
-      <button onClick={onAddCategory}>+</button>
+      <button onClick={onAddCategory} disabled={isSubmitting}>
+        +
+      </button>
     </div>)
 }
