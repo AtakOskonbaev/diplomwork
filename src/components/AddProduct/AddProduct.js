@@ -10,6 +10,7 @@ export default function AddProduct({ category }) {
   const [price, setPrice] = useState(0);
   const [picture, setPicture] = useState(null);
   const [description, setDescription] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!user || !user.isAdmin) {
     return null;
@@ -37,6 +38,7 @@ export default function AddProduct({ category }) {
       return;
     }
 
+    setIsSubmitting(true);
     uploadProductPhoto(picture)
       .then((pictureUrl) =>
         addDoc(productsCollection, {
@@ -56,6 +58,9 @@ export default function AddProduct({ category }) {
       })
       .catch((error) => {
         console.log("Failed to add product:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
   }
 
@@ -104,7 +109,7 @@ export default function AddProduct({ category }) {
             required
           />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={isSubmitting}>{isSubmitting ? "Submitting..." : "Submit"}</button>
       </form>
     </div>
   );
