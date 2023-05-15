@@ -14,7 +14,7 @@ export default function RandomProductRedirect() {
     return (
       <div className="RandomProductRedirect">
         <button onClick={handleClick}>
-          Перейти к случайному продукту
+          Random product
         </button>
       </div>
     )
