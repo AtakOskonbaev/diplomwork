@@ -1,4 +1,4 @@
-import HitProducts from "../components/HitProducts/HitProduct";
+import HitProducts from "../components/HitProducts/HitProducts";
 
 export default function Home() {
   return (

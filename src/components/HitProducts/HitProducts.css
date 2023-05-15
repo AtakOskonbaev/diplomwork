@@ -47,6 +47,7 @@
   background-color: #d30202;
   color: white;
   padding: 1px 8px;
+  z-index: 2;
 }
 .HitProducts .header {
   display: flex;
