@@ -7,11 +7,6 @@ import { AddToCart } from "../AddToCart/AddToCart";
 export default function HitProducts({ category }) {
   const { products } = useContext(AppContext);
 
-  const random1 = Math.floor(Math.random() * products.length);
-  const random2 = Math.floor(Math.random() * products.length);
-  const random3 = Math.floor(Math.random() * products.length);
-  const random4 = Math.floor(Math.random() * products.length);
-
   const output = products
     .map(product => (
       <div key={product.id} className="product">
@@ -37,10 +32,10 @@ export default function HitProducts({ category }) {
         <i class="fa-solid fa-star" /> <span>Bestsellers</span> <hr color="#b1cc19" />
       </div>
       <div className="hits">
-        {output[random1]}
-        {output[random2]}
-        {output[random3]}
-        {output[random4]}
+        {output[0]}
+        {output[10]}
+        {output[24]}
+        {output[6]}
       </div>
     </div>
   )
