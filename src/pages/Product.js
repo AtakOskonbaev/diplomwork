@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useMatch } from "react-router-dom"
 import { AppContext } from "../App";
 import NotFound from "./NotFound";
+import { AddToCart } from "../components/AddToCart/AddToCart";
 
 export default function Product() {
   const { params } = useMatch("/products/:slug");
@@ -15,7 +16,10 @@ export default function Product() {
 
   return (
     <div className="Product">
-      <img src={product.picture} alt={product.name} />
+      <div>
+        <img src={product.picture} alt={product.name} />
+        <AddToCart product={product} />
+      </div>
       <div>
         <h1>{product.name}</h1>
         <p><strong>Price:</strong> {product.price}$</p>
