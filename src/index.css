@@ -17,6 +17,7 @@ code {
 }
 .Product img {
   margin-right: 20px;
+  max-width: 500px;
 }
 .Contacts i {
   color: #555555;
