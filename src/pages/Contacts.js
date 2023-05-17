@@ -7,7 +7,7 @@ export default function Contacts() {
       <p><i className="fa fa-map-marker" /> GUM, 3rd floorBishkek Park, 2nd floor</p>
       <p><i className="fa fa-map-marker" /> Tash-Rabat</p>
       <p><i className="fa fa-map-marker" /> Asia Mall</p>
-      <p><i class="fa-brands fa-youtube" /> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">YouTube</a></p>
+      <p><i class="fa-brands fa-youtube" /> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">YouTube</a></p>
     </div>
   )
 }
