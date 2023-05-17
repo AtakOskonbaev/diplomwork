@@ -12,7 +12,6 @@ import Product from "./pages/Product";
 import { Cart } from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
 import Orders from "./pages/Orders";
-import Footer from "./components/Footer/Footer";
 
 export const AppContext = createContext({
   categories: [],
@@ -72,7 +71,6 @@ function App() {
           </Routes>
         </Layout>
       </AppContext.Provider>
-      <Footer/>
     </div>
   );
 }

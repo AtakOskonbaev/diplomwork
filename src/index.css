@@ -7,7 +7,6 @@ body {
   background-color: white;
   overflow-y: scroll;
   position: relative;
-  padding-bottom: 150px;
 }
 
 code {
