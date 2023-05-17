@@ -17,6 +17,6 @@
 .Layout main {
   grid-area: main;
 }
-.Layout footer {
+.Layout Footer {
   grid-area: footer;
 }
