@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -19,7 +19,9 @@ export default function Footer() {
             <NavLink to="/delivery">Delivery</NavLink>
           </li>
         </ul>
-        <i className="fa-brands fa-instagram" />
+        <Link to="https://instagram.com/xxanax_2.0?igshid=OTk0YzhjMDVlZA==" target="blank">
+          <i className="fa-brands fa-instagram" />
+        </Link>
       </div>
       <div className="info">
         ToyHub - online shop © 2023
