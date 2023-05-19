@@ -7,13 +7,13 @@
   
   max-width: 93%;
   margin: 0 auto;
-  padding-bottom: 100px;
 }
 .Layout header {
   grid-area: header;
 }
 .Layout aside {
   grid-area: aside;
+  height: 385px;
 }
 .Layout main {
   grid-area: main;
