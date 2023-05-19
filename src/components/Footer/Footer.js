@@ -19,7 +19,7 @@ export default function Footer() {
             <NavLink to="/delivery">Delivery</NavLink>
           </li>
         </ul>
-        <i class="fa-brands fa-instagram" />
+        <i className="fa-brands fa-instagram" />
       </div>
       <div className="info">
         ToyHub - online shop © 2023

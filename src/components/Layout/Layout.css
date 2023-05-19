@@ -2,11 +2,12 @@
   display: grid;
   grid-template-areas: "header header"
   "aside main"
-  "aside footer";
+  "footer footer";
   grid-template-columns: 1fr 6fr;
-
+  
   max-width: 93%;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 .Layout header {
   grid-area: header;

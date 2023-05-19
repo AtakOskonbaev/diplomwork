@@ -16,9 +16,11 @@ export default function Layout(props) {
         <CategoryList />
       </aside>
       <main>{props.children}</main>
+
       <footer>
         <Footer />
       </footer>
+
 
     </div>
   )
