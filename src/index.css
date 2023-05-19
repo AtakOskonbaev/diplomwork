@@ -6,7 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   overflow-y: scroll;
-  position: relative;
 }
 
 code {
