@@ -26,4 +26,7 @@
   .Nav .NavItem a {
     padding: 5px 10px;
   }
+  .Nav .NavItem {
+    padding-left: 0px;
+  }
 }
