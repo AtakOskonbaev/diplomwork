@@ -12,3 +12,13 @@
 .RandomProductRedirect button:hover {
   background-color: rgb(255, 130, 151);
 }
+
+@media (max-width:615px) {
+  .RandomProductRedirect button span {
+    display: none;
+  }
+  .RandomProductRedirect button:before {
+    content: "Random";
+    visibility: visible;
+  }
+}

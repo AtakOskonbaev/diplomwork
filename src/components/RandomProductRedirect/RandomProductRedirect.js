@@ -14,7 +14,10 @@ export default function RandomProductRedirect() {
     return (
       <div className="RandomProductRedirect">
         <button onClick={handleClick}>
+          <span>
+
           Random product
+          </span>
         </button>
       </div>
     )
