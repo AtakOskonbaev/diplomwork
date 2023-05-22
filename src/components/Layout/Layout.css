@@ -13,7 +13,7 @@
 }
 .Layout aside {
   grid-area: aside;
-  height: 380px;
+  height: 370px;
 }
 .Layout main {
   grid-area: main;
