@@ -29,4 +29,7 @@
   .Nav .NavItem {
     padding-left: 0px;
   }
+  .Nav .NavItem .homeLink {
+    display: none;
+  }
 }

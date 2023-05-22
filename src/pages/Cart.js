@@ -6,6 +6,7 @@ import { AppContext } from "../App";
 export function Cart() {
   const [modalActive, setModalActive] = useState(false);
   const { cart } = useContext(AppContext);
+  
   if (Object.keys(cart).length === 0) {
     return (
     <div className="Cart" >

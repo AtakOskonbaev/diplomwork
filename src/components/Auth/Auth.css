@@ -30,4 +30,7 @@
   .Auth span {
     display: none;
   }
+  .Auth .blueBtn {
+    padding: 3px 6px;
+  }
 }
