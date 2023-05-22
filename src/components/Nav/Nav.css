@@ -21,3 +21,9 @@
 .Nav .NavItem a:hover {
   color: palevioletred;
 }
+
+@media (max-width:720px) {
+  .Nav .NavItem a {
+    padding: 5px 10px;
+  }
+}
