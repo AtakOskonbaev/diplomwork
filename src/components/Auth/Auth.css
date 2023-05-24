@@ -34,3 +34,11 @@
     padding: 3px 6px;
   }
 }
+@media (max-width:700px) {
+  .Auth .icon {
+    display: none;
+  }
+  .Auth span {
+    display: inline;
+  }
+}

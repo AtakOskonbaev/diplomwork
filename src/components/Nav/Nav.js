@@ -5,8 +5,12 @@ import Auth from "../Auth/Auth";
 export default function Nav() {
   return (
     <nav className="Nav">
-      <ul className="NavItem">
-        <li className="homeLink">
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+      <ul className="menu">
+        <li>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
