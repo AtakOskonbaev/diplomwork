@@ -22,8 +22,3 @@
     visibility: visible;
   }
 }
-@media (max-width:510px) {
-  .RandomProductRedirect {
-    display: none;
-  }
-}
