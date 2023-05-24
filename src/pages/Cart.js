@@ -5,7 +5,7 @@ import { AppContext } from "../App";
 
 export function Cart() {
   const [modalActive, setModalActive] = useState(false);
-  const { cart } = useContext(AppContext);
+  const { cart, user } = useContext(AppContext);
   
   if (Object.keys(cart).length === 0) {
     return (
@@ -15,6 +15,13 @@ export function Cart() {
       <OrderForm active={modalActive} setActive={setModalActive} />
     </div>
     )
+  }
+  if (!user) {
+    <div className="Cart" >
+      <h1>Cart</h1>
+      <CartList />
+      <OrderForm active={modalActive} setActive={setModalActive} />
+    </div>
   }
 
   return (
