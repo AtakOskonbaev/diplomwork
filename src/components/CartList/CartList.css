@@ -1,10 +1,10 @@
 .CartList .cartItem {
   display: grid;
-  grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  
+
   width: 90%;
-  padding: 10px 0 ;
+  padding: 10px 0;
   border-bottom: 1px solid gray;
   font-size: 28px;
   height: 100%;
@@ -27,15 +27,30 @@
 .cartItem i {
   cursor: pointer;
 }
+.cartItem .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 @media (max-width: 880px) {
   .CartList .cartItem {
     font-size: 23px;
   }
+  .cartItem i {
+    font-size: 28px;
+  }
 }
 @media (max-width: 700px) {
   .CartList .cartItem {
     font-size: 18px;
+  }
+  .cartItem .inputs {
+    flex-direction: column-reverse;
+    font-size: 23px;
+  }
+  .inputs i {
+    font-size: 28px;
   }
   .CartList img {
     width: 100px;
