@@ -35,3 +35,9 @@ code {
 .Cart .order:hover {
   background-color: rgb(255, 130, 151);
 }
+@media (max-width:720px) {
+  .Product {
+    display: flex;
+    flex-direction: column;
+  }
+}
