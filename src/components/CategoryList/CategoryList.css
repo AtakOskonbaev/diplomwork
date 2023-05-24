@@ -27,7 +27,7 @@
   border-radius: 5px;
   padding: 0;
 }
-.dropdownContent li a{
+.dropdownContent li a {
   list-style-type: none;
   color: black;
   padding: 6px 8px;
@@ -41,25 +41,29 @@
 .CategoryList:hover .dropdownContent {
   display: block;
 }
+
 .dropdownContent li:hover {
   background-color: #f2f9ff;
 }
 .dropdownContent li a:hover {
   transform: translateX(5px);
   transition: 200ms ease all;
-  color:palevioletred ;
+  color: palevioletred;
 }
 
-@media (max-width:860px) {
-  .CategoryList button  {
+@media (max-width: 860px) {
+  .CategoryList button {
     padding: 5px;
   }
 }
-@media (max-width:780px) {
+@media (max-width: 780px) {
   .CategoryList button span {
     display: none;
   }
   .CategoryList button {
     padding: 5px 30px;
+  }
+  .CategoryList:focus .dropdownContent {
+    display: block;
   }
 }
