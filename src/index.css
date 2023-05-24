@@ -43,4 +43,7 @@ code {
     display: flex;
     flex-direction: column;
   }
+  .NotFound img {
+    width: 200px;
+  }
 }
