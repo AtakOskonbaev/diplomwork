@@ -23,7 +23,7 @@
   display: none;
 }
 
-@media (max-width:610px) {
+@media (max-width:720px) {
   .Auth .icon {
     display: inline;
   }
