@@ -27,3 +27,17 @@
 .cartItem i {
   cursor: pointer;
 }
+
+@media (max-width: 880px) {
+  .CartList .cartItem {
+    font-size: 23px;
+  }
+}
+@media (max-width: 700px) {
+  .CartList .cartItem {
+    font-size: 18px;
+  }
+  .CartList img {
+    width: 120px;
+  }
+}
