@@ -35,6 +35,9 @@ code {
 .Cart .order:hover {
   background-color: rgb(255, 130, 151);
 }
+.Category h2 {
+  margin-left: 10px;
+}
 @media (max-width:720px) {
   .Product {
     display: flex;
