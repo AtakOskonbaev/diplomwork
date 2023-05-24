@@ -63,10 +63,4 @@
   .CategoryList button {
     padding: 5px 30px;
   }
-  .CategoryList:hover .dropdownContent {
-    display: none;
-  }
-  .CategoryList:focus .dropdownContent {
-    display: block;
-  }
 }

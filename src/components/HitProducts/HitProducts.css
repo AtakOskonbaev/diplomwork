@@ -53,7 +53,6 @@
   display: flex;
   color: #d30202;
   align-items: flex-end;
-  font-size: 30px;
 }
 .HitProducts .header span {
   margin: 0 5px;
@@ -61,7 +60,23 @@
 }
 .HitProducts hr {
   width: 100%;
+  transform: translateY(-8px);
 }
 .HitProducts i {
   margin-bottom: 20px;
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .HitProducts .header span {
+    font-size: 35px;
+  }
+  .header i {
+    font-size: 23px;
+  }
+}
+@media (max-width: 600px) {
+  .HitProducts .header i {
+    margin-left: 10px;
+  }
 }
