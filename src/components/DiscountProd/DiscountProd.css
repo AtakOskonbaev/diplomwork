@@ -10,8 +10,33 @@
   text-decoration: line-through;
   font-size: 20px;
   color: red;
+  margin-left: 3px;
 }
 .DiscountProd .newPrice {
   font-size: 25px;
   color: blue;
+}
+.DiscountProd .product {
+  position: relative;
+}
+.DiscountProd .discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: blue;
+  color: white;
+  padding: 1px 3px;
+  z-index: 2;
+  font-size: 10px;
+}
+.DiscountProd h3 {
+  color: blue;
+}
+.DiscountProd .product:hover img {
+  filter: opacity(80%);
+}
+@media (max-width:460px) {
+  .DiscountProd {
+    display: none;
+  }
 }

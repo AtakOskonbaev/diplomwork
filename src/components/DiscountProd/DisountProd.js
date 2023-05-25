@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
-import { AddToCart } from "../AddToCart/AddToCart";
 import "./DiscountProd.css";
 
 export default function DiscountProd() {
@@ -10,6 +9,7 @@ export default function DiscountProd() {
   const output = products
     .map(product => (
       <div key={product.id} className="product">
+      <div className="discount">-30%</div>
         <Link to={'/products/' + product.slug}>
           <img src={product.picture} alt={product.name} />
         </Link>
@@ -20,10 +20,8 @@ export default function DiscountProd() {
 
         <br />
 
-        <span className="dashed">${product.price}</span>
-        <br />
-        <span className="newPrice">${product.price - (product.price * 0.3)}</span>
-        <AddToCart product={product} />
+        <span className="newPrice">${product.price}</span>
+        <span className="dashed">${Math.floor(product.price + (product.price * 1.3)) }</span>
       </div>
     ))
 
@@ -32,7 +30,7 @@ export default function DiscountProd() {
       <h3>
         Today's discount
       </h3>
-      {output[3]}
+      {output[34]}
     </div>
   )
 }
