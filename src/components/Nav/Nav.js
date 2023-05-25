@@ -4,8 +4,8 @@ import Auth from "../Auth/Auth";
 
 export default function Nav() {
 
-//   let menuBtn = document.querySelectorAll('.menu-button-container')
-//   let menu = document.querySelector('menu')
+//   let menuBtn = document.querySelectorAll('#menu-toggle')
+//   let menu = document.querySelector('.menu')
 //   menuBtn.forEach(el => {
 //     el.addEventListener('click', function(){
 //         menu.classList.remove('open')
