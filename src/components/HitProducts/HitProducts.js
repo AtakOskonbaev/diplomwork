@@ -33,9 +33,9 @@ export default function HitProducts({ category }) {
       </div>
       <div className="hits">
         {output[0]}
-        {output[10]}
-        {output[24]}
-        {output[6]}
+        {output[23]}
+        {output[56]}
+        {output[35]}
       </div>
     </div>
   )
