@@ -3,6 +3,7 @@ import "./Layout.css";
 import CategoryList from "../CategoryList/CategoryList";
 import HeaderSection from "../HeaderSection/HeaderSection";
 import Footer from "../Footer/Footer";
+import DiscountProd from "../DiscountProd/DisountProd";
 
 export default function Layout(props) {
   return (
@@ -14,6 +15,7 @@ export default function Layout(props) {
       </header>
       <aside>
         <CategoryList />
+        <DiscountProd/>
       </aside>
       <main>{props.children}</main>
 

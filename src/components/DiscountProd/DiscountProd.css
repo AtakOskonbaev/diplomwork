@@ -1,0 +1,17 @@
+.DiscountProd{
+  margin-top: 20px;
+  width: 125px;
+  font-size: 13px;
+}
+.DiscountProd img {
+  width: 125px;
+}
+.DiscountProd .dashed {
+  text-decoration: line-through;
+  font-size: 20px;
+  color: red;
+}
+.DiscountProd .newPrice {
+  font-size: 25px;
+  color: blue;
+}
