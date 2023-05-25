@@ -3,6 +3,15 @@ import "./Nav.css";
 import Auth from "../Auth/Auth";
 
 export default function Nav() {
+
+//   let menuBtn = document.querySelectorAll('.menu-button-container')
+//   let menu = document.querySelector('menu')
+//   menuBtn.forEach(el => {
+//     el.addEventListener('click', function(){
+//         menu.classList.remove('open')
+//     })
+// })
+
   return (
     <nav className="Nav">
       <input id="menu-toggle" type="checkbox" />

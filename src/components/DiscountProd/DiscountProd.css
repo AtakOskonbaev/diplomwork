@@ -35,7 +35,7 @@
 .DiscountProd .product:hover img {
   filter: opacity(80%);
 }
-@media (max-width:460px) {
+@media (max-width:580px) {
   .DiscountProd {
     display: none;
   }

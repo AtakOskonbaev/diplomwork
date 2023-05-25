@@ -25,12 +25,14 @@ export default function DiscountProd() {
       </div>
     ))
 
+    const random = Math.floor(Math.random() * products.length)
+
   return (
     <div className="DiscountProd">
       <h3>
-        Today's discount
+        Random discount
       </h3>
-      {output[34]}
+      {output[random]}
     </div>
   )
 }
