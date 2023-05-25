@@ -14,7 +14,7 @@ export default function CartLink() {
         <button className="cartlink-button">
           <img alt="cart" src="https://magic-toys.kg/image/cache/catalog/revolution/demo_tovars/market/soc/shopping-cart-21x21.svg" className="cart" />
           <div>
-            Cart: {total}
+            <span>Cart:</span> {total}
           </div>
         </button>
       </Link>
