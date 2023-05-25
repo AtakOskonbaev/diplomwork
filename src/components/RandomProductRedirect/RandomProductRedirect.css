@@ -8,6 +8,7 @@
   font-family: inherit;
   transition: all 100ms linear;
   font-size: 20px;
+  cursor: pointer;
 }
 .RandomProductRedirect button:hover {
   background-color: rgb(255, 130, 151);
